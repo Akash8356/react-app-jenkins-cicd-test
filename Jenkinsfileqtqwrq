@@ -1,0 +1,58 @@
+// // pipeline {
+// //   agent any
+
+// //   environment {
+// //     IMAGE_NAME = "vite-react-app"
+// //     CONTAINER_NAME = "vite-react-container"
+// //     PORT = "3000"
+// //   }
+
+// //   stages {
+// //     stage('Checkout') {
+// //       steps {
+// //         git url: 'https://github.com/Akash8356/react-app-jenkins-cicd-test.git', branch: 'master'
+// //       }
+// //     }
+
+// //     stage('Build & Deploy') {
+// //       steps {
+// //         bat  '''
+// //         docker-compose down || true
+// //         docker-compose build
+// //         docker-compose up -d
+// //         '''
+// //       }
+// //     }
+// //   }
+
+// //   post {
+// //     success {
+// //       echo "✅ App deployed at http://localhost:${PORT}"
+// //     }
+// //     failure {
+// //       echo "❌ Build or deploy failed"
+// //     }
+// //   }
+// // }
+
+// pipeline {
+//   agent any
+
+//   stages {
+//     stage('Checkout') {
+//       steps {
+//         git 'https://github.com/Akash8356/react-app-jenkins-cicd-test.git'
+//       }
+//     }
+
+//     stage('Build & Deploy') {
+//       // steps {
+//         bat '''
+//         docker-compose down || exit 0
+//         docker-compose build
+//         docker-compose up -d
+//         '''
+//       }
+//     }
+//   }
+// }
