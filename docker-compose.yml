@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  vite-react-app:
+    build: .
+    ports:
+      - "3000:80"
+    container_name: react-app-jenkin-cicd-test
